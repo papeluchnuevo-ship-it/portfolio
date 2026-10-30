@@ -1,0 +1,14 @@
+PORTFOLIO D'ELIF SILA KAPLAN — site statique (HTML / CSS / JavaScript)
+
+Pour le voir sur ton ordinateur : double-clique sur index.html.
+(Les polices Inter se chargent depuis Google Fonts : il faut internet.)
+
+Structure
+  index.html          la page (bureau, fenêtres, contenus)
+  css/variables.css   couleurs, typographie, espacements exportés de Figma
+  css/style.css       mise en page et styles
+  js/main.js          fenêtres, onglets, carrousel, rappels, vidéos
+  img/ icones/ videos/ documents/   les fichiers du portfolio
+
+Pour mettre en ligne : glisse tout ce dossier sur Netlify (app.netlify.com/drop).
+Liens à modifier si besoin : cherche « mailto: », « linkedin », « instagram » et « cerebro-edu.fr » dans index.html.

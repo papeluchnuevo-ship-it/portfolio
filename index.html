@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elif Sila Kaplan · Portfolio UX/UI</title>
+  <meta name="description" content="Portfolio d'Elif Sila Kaplan, étudiante en BUT MMI (parcours Strat UX), à la recherche d'un stage UX/UI dès avril 2027.">
+  <meta property="og:title" content="Elif Sila Kaplan · Portfolio UX/UI">
+  <meta property="og:description" content="Mes projets UX/UI : CEREBRO et Treble. Disponible pour un stage dès avril 2027.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#d6e7f8">
+  <link rel="icon" type="image/png" href="icones/dossier.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Barre de menu ===== -->
+<header class="menu" id="menu">
+  <nav class="menu__gauche" aria-label="Menu principal">
+    <span class="menu__finder">Finder</span>
+    <button class="menu__item" type="button" data-ouvrir="apropos">À propos de moi</button>
+    <a class="menu__item" href="mailto:ekaplanpro@gmail.com">Me contacter</a>
+    <a class="menu__item" href="documents/cv-elif-sila-kaplan.pdf" target="_blank" rel="noopener">CV</a>
+  </nav>
+  <div class="menu__droite" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5c1.4-2.2 3.3-3 5.5-3s4.1.8 5.5 3"/></svg>
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2.5 9a14 14 0 0 1 19 0"/><path d="M5.8 12.6a9.4 9.4 0 0 1 12.4 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg>
+    <svg viewBox="0 0 28 24" width="22" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="21" height="12" rx="3.5"/><path d="M26 10v4" stroke-linecap="round"/><rect x="4.5" y="8.5" width="8" height="7" rx="1.5" fill="currentColor" stroke="none"/></svg>
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+    <span id="date">Lun. 1 janvier</span>
+    <span id="heure">00:00</span>
+  </div>
+</header>
+
+<!-- ===== Bureau ===== -->
+<main class="bureau" id="bureau">
+  <div class="ciel" aria-hidden="true">
+    <i class="nuage n1"></i><i class="nuage n2"></i><i class="nuage n3"></i><i class="nuage n4"></i>
+  </div>
+
+  <div class="scene" id="scene">
+
+    <!-- Widget : carrousel d'images -->
+    <section class="widget widget-images" aria-label="Galerie d'images (défilement automatique)">
+      <div class="widget-images__piste" id="piste">
+        <img src="img/bureau/carrousel-1.webp" alt="Visage de lapin dessiné au trait" width="735" height="511">
+        <img src="img/bureau/carrousel-2.webp" alt="Un ordinateur portable, une palette de peinture et un ours en peluche sur un bureau" width="1600" height="2133" class="cadre-haut">
+        <img src="img/bureau/carrousel-3.webp" alt="Illustration de deux jeunes gens, le menton dans la main" width="500" height="250">
+        <img src="img/bureau/carrousel-4.webp" alt="Détail d'un visage de manga en noir et blanc" width="736" height="339">
+        <img src="img/bureau/carrousel-5.webp" alt="Photo de jambes et de baskets, vue d'en haut" width="736" height="981">
+        <img src="img/bureau/carrousel-6.webp" alt="Texte rose : Whatever it takes." width="736" height="736">
+      </div>
+      <div class="widget-images__points" id="points" aria-hidden="true"></div>
+    </section>
+
+    <!-- Widget : avatar animé -->
+    <section class="widget widget-avatar" aria-label="Mon avatar">
+      <img src="img/bureau/avatar.gif" alt="Mon avatar en pixel art, qui cligne de l'œil" width="500" height="500">
+    </section>
+
+    <!-- Widget : rappels -->
+    <section class="widget widget-rappels" aria-label="Ma liste de rappels">
+      <div class="rappels__resume">
+        <span class="rappels__icone" aria-hidden="true">🎀</span>
+        <div>
+          <p class="rappels__nombre" id="rappels-nombre">3</p>
+          <p class="rappels__nom">à faire</p>
+        </div>
+      </div>
+      <ul class="rappels__liste" id="rappels">
+        <li><label><input type="checkbox"><span>Trouver un stage</span></label></li>
+        <li><label><input type="checkbox" checked><span>Monter le vlog</span></label></li>
+        <li><label><input type="checkbox"><span>Finir l’affiche</span></label></li>
+        <li><label><input type="checkbox"><span>Trouver une alternance</span></label></li>
+      </ul>
+    </section>
+
+    <!-- Dossiers -->
+    <button class="dossier dossier-projets" type="button" data-ouvrir="projets">
+      <img src="icones/dossier.png" alt="" width="96" height="74">
+      <span>Projets</span>
+    </button>
+    <button class="dossier dossier-apropos" type="button" data-ouvrir="apropos">
+      <img src="icones/dossier.png" alt="" width="96" height="74">
+      <span>À propos de moi</span>
+    </button>
+
+    <!-- ============ Fenêtre : À propos ============ -->
+    <section class="fenetre fenetre-apropos" id="fen-apropos" role="dialog" aria-label="À propos de moi" hidden>
+      <aside class="fenetre__barre">
+        <div class="fenetre__poignee">
+          <div class="feux">
+            <button class="feu feu-rouge" type="button" data-fermer aria-label="Fermer la fenêtre"><b>✕</b></button>
+            <span class="feu feu-jaune" aria-hidden="true"><b>–</b></span>
+            <span class="feu feu-vert" aria-hidden="true"><b>+</b></span>
+          </div>
+        </div>
+        <nav class="fenetre__liste" aria-label="Sections">
+          <button type="button" class="onglet est-actif" data-cible="presentation">Présentation</button>
+          <button type="button" class="onglet" data-cible="parcours">Parcours</button>
+          <button type="button" class="onglet" data-cible="competences">Compétences</button>
+        </nav>
+      </aside>
+
+      <div class="fenetre__contenu" tabindex="0">
+        <article class="page page-apropos">
+
+          <header class="ap-intro" id="presentation">
+            <div class="ap-intro__texte">
+              <h1 class="titre-hero"><span>Elif Sila</span><span class="surligne">Kaplan</span></h1>
+              <div class="ap-intro__paragraphes texte-description">
+                <p>Bonjour, moi c'est Elif et je suis étudiante en 2e année de BUT MMI. S'il n'a pas toujours été simple de définir ce qui me plaît, j'ai aujourd'hui trouvé mon véritable terrain de jeu : le design.</p>
+                <p>Toujours curieuse de comprendre comment les choses sont pensées derrière l'écran, je reste en phase d'apprentissage. Je suis actuellement à la recherche d'un stage pour valider ma deuxième année, avec l'envie d'apprendre aux côtés de professionnels, de mettre les mains dans des projets réels et de continuer à affiner mon œil.</p>
+              </div>
+              <p class="pastille-dispo"><i aria-hidden="true"></i>Disponible pour un stage dès avril 2027</p>
+              <div class="boutons">
+                <a class="bouton bouton-principal" href="documents/cv-elif-sila-kaplan.pdf" download>Télécharger mon CV</a>
+                <a class="bouton bouton-secondaire" href="mailto:ekaplanpro@gmail.com">Me contacter</a>
+              </div>
+            </div>
+            <div class="ap-avatar" aria-hidden="true">
+              <img class="ap-avatar__fenetre" src="icones/fenetre-avatar.png" alt="" width="300" height="433">
+              <img class="ap-avatar__etoile" src="icones/etoile.png" alt="" width="84" height="84">
+              <img class="ap-avatar__nuage" src="icones/etoiles-nuage.png" alt="" width="110" height="107">
+            </div>
+          </header>
+
+          <section class="ap-section" id="parcours">
+            <h2 class="pastille-titre">Mon parcours</h2>
+            <ol class="frise">
+              <li>
+                <p class="frise__date note"><span>2025 – 2028</span><em class="etiquette">en cours</em></p>
+                <p class="frise__titre titre-bloc">BUT Métiers du Multimédia et de l’Internet</p>
+                <p class="frise__lieu note">IUT de Bobigny, Université Sorbonne Paris Nord</p>
+              </li>
+              <li>
+                <p class="frise__date note"><span>2025</span></p>
+                <p class="frise__titre titre-bloc">Baccalauréat technologique – STMG</p>
+                <p class="frise__lieu note">Lycée Alfred Nobel, Clichy-sous-Bois</p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="ap-section" id="competences">
+            <h2 class="pastille-titre">Mes compétences</h2>
+            <h3 class="intertitre sous-rubrique">Techniques</h3>
+            <ul class="logiciels" aria-label="Logiciels et langages">
+              <li><img src="icones/icone-figma.svg" alt="Figma" title="Figma" width="50" height="50"></li>
+              <li><img src="icones/icone-indesign.svg" alt="InDesign" title="InDesign" width="50" height="50"></li>
+              <li><img src="icones/icone-photoshop.svg" alt="Photoshop" title="Photoshop" width="50" height="50"></li>
+              <li><img src="icones/icone-illustrator.svg" alt="Illustrator" title="Illustrator" width="50" height="50"></li>
+              <li><img src="icones/icone-affinity.svg" alt="Affinity" title="Affinity" width="50" height="50"></li>
+              <li><img src="icones/icone-wordpress.svg" alt="WordPress" title="WordPress" width="50" height="50"></li>
+              <li><img src="icones/icone-css3.svg" alt="CSS" title="CSS" width="50" height="50"></li>
+              <li><img src="icones/icone-html5.svg" alt="HTML" title="HTML" width="50" height="50"></li>
+              <li><img src="icones/icone-mysql.svg" alt="MySQL" title="MySQL" width="50" height="50"></li>
+              <li><img src="icones/icone-php.svg" alt="PHP" title="PHP" width="50" height="50"></li>
+            </ul>
+            <h3 class="intertitre sous-rubrique">Professionnelles</h3>
+            <ol class="numerotee">
+              <li><span>01</span>Conception d'interfaces</li>
+              <li><span>02</span>Gestion de projet</li>
+              <li><span>03</span>Travail en équipe</li>
+              <li><span>04</span>Communication</li>
+              <li><span>05</span>Créativité</li>
+              <li><span>06</span>Autonomie</li>
+            </ol>
+          </section>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Fenêtre : Projets ============ -->
+    <section class="fenetre fenetre-projets" id="fen-projets" role="dialog" aria-label="Projets" hidden>
+      <aside class="fenetre__barre">
+        <div class="fenetre__poignee">
+          <div class="feux">
+            <button class="feu feu-rouge" type="button" data-fermer aria-label="Fermer la fenêtre"><b>✕</b></button>
+            <span class="feu feu-jaune" aria-hidden="true"><b>–</b></span>
+            <span class="feu feu-vert" aria-hidden="true"><b>+</b></span>
+          </div>
+        </div>
+        <nav class="fenetre__liste" aria-label="Projets">
+          <button type="button" class="onglet est-actif" data-projet="cerebro">Cerebro</button>
+          <button type="button" class="onglet" data-projet="treble">Treble</button>
+          <button type="button" class="onglet" data-projet="avenir">À venir</button>
+        </nav>
+      </aside>
+
+      <div class="fenetre__contenu" id="contenu-projets" tabindex="0">
+
+        <!-- ---------- CEREBRO ---------- -->
+        <article class="page page-projet" id="projet-cerebro">
+          <header class="pj-ouverture">
+            <p class="etiquette">projet 01 · Cerebro</p>
+            <h1 class="titre-hero titre-projet">CEREBRO</h1>
+            <p class="accroche">La plateforme collaborative pensée par et pour les étudiants de BUT MMI.</p>
+            <figure class="pj-hero">
+              <img src="img/projet-1/accueil-site.webp" alt="Page d'accueil de la plateforme CEREBRO, avec son fil d'actualité et ses modules" width="1600" height="905">
+            </figure>
+            <dl class="infos">
+              <div><dt>Rôle</dt><dd>UX/UI designer</dd></div>
+              <div><dt>Équipe</dt><dd>3 personnes</dd></div>
+              <div><dt>Période</dt><dd>Été 2026</dd></div>
+              <div><dt>Statut</dt><dd>En ligne</dd></div>
+            </dl>
+            <a class="bouton bouton-secondaire" href="https://cerebro-edu.fr/" target="_blank" rel="noopener">Voir le site <span aria-hidden="true">↗</span></a>
+          </header>
+
+          <section class="pj-section">
+            <h2 class="pastille-titre">Le contexte</h2>
+            <div class="contexte texte-courant">
+              <p>En première année de BUT MMI, on apprend beaucoup de choses très vite, et on se retrouve à chercher des ressources un peu partout : comment faire valider son code par le W3C, où retrouver les devoirs quand les profs les donnent seulement à l'oral, comment s'organiser dans un travail de groupe, comment rattraper un cours manqué.</p>
+              <p>Joao, un camarade de promotion, a eu l'idée de réunir tout ça au même endroit. CEREBRO est né de là : une plateforme collaborative, conçue par des étudiants de MMI pour des étudiants de MMI, avec quatre modules qui répondent chacun à l'un de ces besoins.</p>
+              <p>Pendant l'été 2026, Joao, Aaron et moi avons conçu et développé la plateforme. J'y avais le rôle de designer UX/UI : c'était à moi de penser le site de A à Z pour qu'il soit simple à utiliser, même pour quelqu'un qui le découvre.</p>
+            </div>
+          </section>
+
+          <section class="pj-section pj-role">
+            <h2 class="pastille-titre">Mon rôle</h2>
+            <p class="role-intitule">UX/UI designer</p>
+            <ul class="missions">
+              <li>Architecture et navigation du site</li>
+              <li>Maquettes des quatre modules</li>
+              <li>Prototype et états interactifs</li>
+              <li>Refonte du logo</li>
+              <li>Rédaction d’un guide technique pour les développeurs</li>
+            </ul>
+          </section>
+
+          <section class="pj-section">
+            <h2 class="pastille-titre">Mon travail</h2>
+            <div class="travaux">
+              <article class="travail">
+                <figure class="travail__image"><img src="img/projet-1/prototype-ordinateur.webp" alt="Le prototype Figma de la plateforme CEREBRO, avec tous ses écrans reliés" width="1600" height="1007" loading="lazy"></figure>
+                <div class="travail__texte"><p class="travail__num note">01</p><h3 class="titre-bloc">Architecture et navigation</h3><p class="description">J'ai pensé la structure de la plateforme et le parcours de l'étudiant entre ses quatre modules, pour qu'il trouve chaque outil en quelques clics.</p></div>
+              </article>
+              <article class="travail">
+                <figure class="travail__image"><img src="img/projet-1/composants.webp" alt="Les composants Figma de CEREBRO : couleurs, typographies et boutons" width="1600" height="1039" loading="lazy"></figure>
+                <div class="travail__texte"><p class="travail__num note">02</p><h3 class="titre-bloc">De la maquette au site en ligne</h3><p class="description">Les composants conçus sur Figma (couleurs, typographies, boutons) se retrouvent à l'identique sur le site en ligne : l'équipe a respecté la maquette.</p></div>
+              </article>
+              <article class="travail">
+                <figure class="travail__image"><img src="img/projet-1/refonte-logo.webp" alt="Le logo CEREBRO refait sur Affinity, avec l'ancienne et la nouvelle version" width="1600" height="1039" loading="lazy"></figure>
+                <div class="travail__texte"><p class="travail__num note">03</p><h3 class="titre-bloc">Refonte du logo</h3><p class="description">J'ai refait le logo de CEREBRO sur Affinity : un logotype propre, aux couleurs de la plateforme.</p></div>
+              </article>
+              <article class="travail">
+                <figure class="travail__image"><img src="img/projet-1/apercu-gt.webp" alt="Aperçu du guide technique de CEREBRO" width="1600" height="1131" loading="lazy"></figure>
+                <div class="travail__texte"><p class="travail__num note">04</p><h3 class="titre-bloc">Le guide technique</h3><p class="description">J'ai documenté chaque page et chaque fonctionnalité pour faciliter le travail des développeurs.</p></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="pj-section">
+            <ul class="pastilles" aria-label="Outils et notions">
+              <li>Figma</li><li>Auto Layout</li><li>Variables de couleurs</li><li>Variables typographiques</li><li>Composants</li><li>Prototype interactif</li><li>Guide technique</li>
+            </ul>
+          </section>
+
+          <section class="pj-section">
+            <div class="demos">
+              <div class="demo-nav">
+                <div class="demo-nav__barre" aria-hidden="true"><i></i><i></i><i></i></div>
+                <button class="demo-lecture" type="button" data-video="videos/demo-ordinateur.mp4" aria-label="Lire la vidéo de démonstration sur ordinateur">
+                  <img src="img/projet-1/demo-ordinateur-affiche.webp" alt="" width="1600" height="1038" loading="lazy">
+                  <span class="demo-lecture__bouton" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="demo-tel">
+                <button class="demo-lecture" type="button" data-video="videos/demo-mobile.mp4" aria-label="Lire la vidéo de démonstration sur mobile">
+                  <img src="img/projet-1/demo-mobile-affiche.webp" alt="" width="600" height="1296" loading="lazy">
+                  <span class="demo-lecture__bouton" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="pj-section">
+            <h2 class="pastille-titre">Mon bilan</h2>
+            <div class="bilan">
+              <article><p class="note">01</p><h3 class="intertitre">Apprendre en autonomie</h3><p class="description">Variables typographiques, variables de couleurs, Auto Layout : tout appris seule, c'était le but du projet.</p></article>
+              <article><p class="note">02</p><h3 class="intertitre">Concevoir pour les développeurs</h3><p class="description">Échanger avec eux m'a appris ce qui rend une maquette facile à intégrer, et j'ai rédigé un guide technique.</p></article>
+              <article><p class="note">03</p><h3 class="intertitre">Travailler en équipe</h3><p class="description">J'ai autant appris du côté des développeurs que du design.</p></article>
+            </div>
+            <div class="resultat"><p class="etiquette">En ligne</p><p class="resultat__texte">Et utilisée par les étudiants MMI de Bobigny.</p></div>
+          </section>
+
+          <footer class="pj-suite"><button class="bouton bouton-secondaire" type="button" data-projet="treble">Projet suivant <span aria-hidden="true">→</span></button></footer>
+        </article>
+
+        <!-- ---------- TREBLE ---------- -->
+        <article class="page page-projet" id="projet-treble" hidden>
+          <header class="pj-ouverture">
+            <p class="etiquette">projet 02 · Treble</p>
+            <h1 class="titre-hero titre-projet">TREBLE</h1>
+            <p class="accroche">Une application qui met en relation des musiciens et des particuliers qui louent leurs locaux.</p>
+            <figure class="pj-hero pj-hero-haut">
+              <img src="img/projet-2/vitrine.webp" alt="Page d'accueil du site vitrine de Treble : « Votre musique mérite d'être entendue »" width="1100" height="3796">
+            </figure>
+            <dl class="infos">
+              <div><dt>Rôle</dt><dd>Cheffe de projet</dd></div>
+              <div><dt>Équipe</dt><dd>6 personnes</dd></div>
+              <div><dt>Période</dt><dd>1re année de BUT</dd></div>
+              <div><dt>Cadre</dt><dd>SAE 202</dd></div>
+            </dl>
+          </header>
+
+          <section class="pj-section">
+            <h2 class="pastille-titre">Le contexte</h2>
+            <div class="contexte texte-courant">
+              <p>La SAE 202 demandait de concevoir un produit ou un service, ainsi que sa stratégie de communication. Avec mon équipe, nous avons imaginé Treble : une application qui met en relation des musiciens entre eux, et des particuliers qui louent leurs locaux, par exemple pour en faire des salles de concert.</p>
+              <p>Dans Treble, on peut échanger avec d'autres musiciens et avec des propriétaires, louer des salles, louer des instruments, et trouver les locaux les plus proches grâce à une carte.</p>
+            </div>
+          </section>
+
+          <section class="pj-section pj-role">
+            <h2 class="pastille-titre">Mon rôle</h2>
+            <p class="role-intitule">Cheffe de projet</p>
+            <ul class="missions">
+              <li>Pilotage du projet et suivi de l'équipe</li>
+              <li>Gestion du budget</li>
+              <li>Rédaction du cahier des charges</li>
+              <li>Aide à la réalisation des maquettes</li>
+            </ul>
+          </section>
+
+          <section class="pj-section">
+            <h2 class="pastille-titre">Mon travail</h2>
+            <div class="travaux">
+              <article class="travail">
+                <figure class="travail__image travail__image-haute"><img src="img/projet-2/page-de-garde.webp" alt="Page de garde du cahier des charges de Treble" width="1414" height="2000" loading="lazy"></figure>
+                <div class="travail__texte"><p class="travail__num note">01</p><h3 class="titre-bloc">Le cahier des charges</h3><p class="description">Le document qui réunit tout le projet : personas, benchmark, maquettes… C'était mon plus gros travail sur Treble.</p><a class="bouton bouton-secondaire" href="documents/cahier-des-charges-treble.pdf" target="_blank" rel="noopener">Lire le cahier des charges (PDF)</a></div>
+              </article>
+              <article class="travail">
+                <figure class="travail__image"><img src="img/projet-2/maquettes-treble.webp" alt="Les maquettes de l'application Treble dans Figma" width="1600" height="965" loading="lazy"></figure>
+                <div class="travail__texte"><p class="travail__num note">02</p><h3 class="titre-bloc">Les maquettes de l'application</h3><p class="description">J'ai aidé à dessiner les maquettes de Treble : la carte des locaux les plus proches, la location de salles et d'instruments, les échanges entre utilisateurs.</p></div>
+              </article>
+              <article class="travail">
+                <figure class="travail__image"><img src="img/projet-2/treble-pilotage.webp" alt="Tableau de pilotage du projet Treble : planning, tâches, risques et budget" width="1600" height="1131" loading="lazy"></figure>
+                <div class="travail__texte"><p class="travail__num note">03</p><h3 class="titre-bloc">Piloter le projet</h3><p class="description">Mon rôle de cheffe de projet : suivre l'avancement, gérer le budget et coordonner l'équipe.</p></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="pj-section">
+            <ul class="pastilles" aria-label="Compétences mobilisées">
+              <li>Gestion de projet</li><li>Cahier des charges</li><li>Maquettage</li><li>Travail d’équipe</li>
+            </ul>
+          </section>
+
+          <section class="pj-section">
+            <h2 class="pastille-titre">Mon bilan</h2>
+            <div class="bilan bilan-deux">
+              <article><p class="note">01</p><h3 class="intertitre">Diriger une équipe</h3><p class="description">C'était la première fois que j'étais cheffe de projet, et c'est ce que j'ai trouvé le plus enrichissant.</p></article>
+              <article><p class="note">02</p><h3 class="intertitre">Tout réunir dans un document</h3><p class="description">Le cahier des charges rassemble personas, benchmark et maquettes : tout devait rester cohérent.</p></article>
+            </div>
+          </section>
+
+          <footer class="pj-suite"><button class="bouton bouton-secondaire" type="button" data-projet="avenir">Projet suivant <span aria-hidden="true">→</span></button></footer>
+        </article>
+
+        <!-- ---------- À VENIR ---------- -->
+        <article class="page page-projet page-avenir" id="projet-avenir" hidden>
+          <header class="pj-ouverture">
+            <p class="etiquette">projet 03 · à venir</p>
+            <h1 class="titre-hero titre-projet">À VENIR</h1>
+            <p class="accroche">D'autres projets sont en préparation.</p>
+          </header>
+          <section class="pj-section">
+            <div class="avenir texte-courant">
+              <p>Je continue d'apprendre, de concevoir et de créer. Les prochains projets seront ajoutés ici au fur et à mesure.</p>
+              <p>En attendant, vous pouvez revenir sur CEREBRO et Treble, ou me contacter directement.</p>
+            </div>
+            <div class="boutons">
+              <a class="bouton bouton-principal" href="mailto:ekaplanpro@gmail.com">Me contacter</a>
+              <button class="bouton bouton-secondaire" type="button" data-projet="cerebro">Revenir à CEREBRO</button>
+            </div>
+          </section>
+        </article>
+
+      </div>
+    </section>
+
+  </div><!-- /scene -->
+</main>
+
+<!-- ===== Dock ===== -->
+<footer class="dock" id="dock" aria-label="Liens et contact">
+  <a class="dock__icone" href="https://www.linkedin.com/in/elif-sila-kaplan-9688b63b1" target="_blank" rel="noopener" data-nom="LinkedIn" aria-label="LinkedIn (nouvel onglet)"><img src="icones/icone-linkedin.svg" alt="" width="56" height="56"></a>
+  <a class="dock__icone" href="https://www.instagram.com/silaeyesin4k" target="_blank" rel="noopener" data-nom="Instagram" aria-label="Instagram (nouvel onglet)"><img src="icones/icone-instagram.svg" alt="" width="56" height="56"></a>
+  <a class="dock__icone" href="mailto:ekaplanpro@gmail.com" data-nom="Mail" aria-label="M'écrire un e-mail"><img src="icones/icone-mail.png" alt="" width="56" height="56"></a>
+  <span class="dock__separateur" aria-hidden="true"></span>
+  <span class="dock__icone dock__corbeille" data-nom="Corbeille" aria-hidden="true"><img src="icones/icone-corbeille.svg" alt="" width="56" height="56"></span>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
